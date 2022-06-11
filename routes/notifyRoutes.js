@@ -4,7 +4,7 @@ const notifyRoute = express.Router();
 const sgMail= require('@sendgrid/mail')
 const Apikey = process.env.Apikey;
 sgMail.setApiKey(Apikey);
-    const URLorder= 'http://localhost:6000/api/orders/';
+const URLorder= 'http://localhost:2000/api/orders/';
 const axios = require('axios');
 const URLinventory= 'http://localhost:5000/api/product/';
 
