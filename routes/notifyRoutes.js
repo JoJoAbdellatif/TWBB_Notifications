@@ -27,7 +27,7 @@ notifyRoute.get('/update', asyncHandler(async(req , res) => {
         const prPrice =Object.assign(price.data)
         const prdetail =Object.assign(detail.data)
         const obj = {'ProductName':prdetail.productName,'Productprice':prPrice.productPrice,'Quantity':data.Items[i].Quantity}
-         cart =cart+ `Name: ${prdetail.productName}    Price:${prPrice.productPrice} Quantity:${data.Items[i].Quantity} <br>`
+         cart =cart+ `Name: ${prdetail.productName}    Price:${prPrice.productPrice/100} Quantity:${data.Items[i].Quantity} <br>`
         total = total+parseInt(prPrice.productPrice)*data.Items[i].Quantity
         
         purchacelist.push(obj)
