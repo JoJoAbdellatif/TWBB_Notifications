@@ -38,17 +38,18 @@ notifyRoute.get('/update', asyncHandler(async(req , res) => {
     const message ={
         to:email,
         from:'rabbit.instant@gmail.com',
-        subject:'Update On Your Order',
+        subject:'Update On Your Order ',
         html:`<html>
         <head>
+        
         </head>
         <body>
             <img src="https://img.freepik.com/free-photo/thank-you-your-order-card_53876-110287.jpg?w=2000" alt="basket" width="300" height="150">
-            <h3 style="color:#124831" >Your order has been confirmed! </h3>
+            <h3 style="color:#124831">Your order is ${status}</h3>
             <p style="color:black">Dear Customer,</p>
             <p style="color:black">Thank you for ordering. Your order was created, these are the products you ordered:</p>
-            <p style="color:black"> Name:</p>
-            <p style="color:black">Total:</p>
+            <br>${cart}<br>
+            Total is:${t}<br>
                <pre> 
       <strong>Best regards,</strong>
       <strong>Rabbit team</strong> 
@@ -79,7 +80,8 @@ notifyRoute.get('/register', asyncHandler(async(req , res) => {
             <h1 style="color:#124831">Welcome to Rabbit! </h1>
             <P style="color:black"> We are very happy to welcome a new member to the Rabbit family.</P>
             <p style="color:black">Enjoy your new way of shopping, and get your groceries in just 20 Minutes!</p>
-            <p style="color:black">Click on button to verify:  <button type="button" class="btn btn-primary">Verify</button> </p>
+            <p style="color:black">Click on button to verify:  <button><a href=' https://twbb-users.vercel.app/api/users/verify?emailtoken=${emailToken}' alt='Broken Link'></a></button></p>
+            
             <pre> 
       <strong>Best regards,</strong>
       <strong>Rabbit team</strong>
