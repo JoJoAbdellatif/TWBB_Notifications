@@ -47,7 +47,7 @@ notifyRoute.get('/update', asyncHandler(async(req , res) => {
             <img src="https://img.freepik.com/free-photo/thank-you-your-order-card_53876-110287.jpg?w=2000" alt="basket" width="300" height="150">
             <h3 style="color:#124831">Your order is ${status}</h3>
             <p style="color:black">Dear Customer,</p>
-            <p style="color:black">Thank you for ordering. Your order was created, these are the products you ordered:</p>
+            <p style="color:black">Thank you for ordering. Your order was ${status}, these are the products you ordered:</p>
             <br>${cart}<br>
             Total is:${t}<br>
                <pre> 
