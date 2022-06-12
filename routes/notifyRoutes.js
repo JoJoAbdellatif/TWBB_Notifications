@@ -80,8 +80,8 @@ notifyRoute.get('/register', asyncHandler(async(req , res) => {
             <h1 style="color:#124831">Welcome to Rabbit! </h1>
             <P style="color:black"> We are very happy to welcome a new member to the Rabbit family.</P>
             <p style="color:black">Enjoy your new way of shopping, and get your groceries in just 20 Minutes!</p>
-            <p style="color:black">Click on button to verify:  <button><a href=' https://twbb-users.vercel.app/api/users/verify?emailtoken=${emailToken}' alt='Broken Link'></a></button></p>
-            
+            <p style="color:black">Click on button to verify:  </p>
+            <button><a href=' https://twbb-users.vercel.app/api/users/verify?emailtoken=${emailToken}' alt='Broken Link'>Click to verify</a></button> 
             <pre> 
       <strong>Best regards,</strong>
       <strong>Rabbit team</strong>
